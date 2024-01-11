@@ -1,0 +1,9 @@
+version: '3'
+
+services:
+  app:
+    image: hari/flight:latest
+    ports:
+      - "8080:8080"
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:mysql://${host}:3306/flightreservation?autoReconnect=true&useSSL=false
